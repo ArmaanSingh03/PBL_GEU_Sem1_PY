@@ -32,7 +32,7 @@ if __name__ == "__main__":
 			description = input("Expense description (or blank to finish): ").strip()
 			if not description:
 				break
-			amount = validate_amount(input("Expense amount: $"))
+			amount = validate_amount(input("Expense amount: ₹"))
 			add_transaction(transactions, description, amount)
 
 		print(f"Total expenses: ₹{cal_total_expenses(transactions):.2f}")
