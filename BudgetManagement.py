@@ -1,4 +1,3 @@
-
 def validate_amount(amount):
 	try:
 		value = float(amount)
