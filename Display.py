@@ -12,13 +12,13 @@ def plot_all_charts(category_totals, monthly_totals, budgets):
     ax1.set_ylabel("Amount (Rs.)")
     ax1.tick_params(axis="x", rotation=30)
 
-    # Chart 2, monthly expenditure
+    # Chart 2, monthly spending
     ax2.plot(list(monthly_totals.keys()), list(monthly_totals.values()), marker="o", color="darkorange")
     ax2.set_title("Monthly Expenditure")
     ax2.set_xlabel("Month")
     ax2.set_ylabel("Amount (Rs.)")
 
-    # Chart 3, budget vs actual (every category from either source)
+    # Chart 3, budget vs actual 
     categories = sorted(set(budgets) | set(category_totals))
     x = range(len(categories))
     width = 0.4
@@ -34,4 +34,4 @@ def plot_all_charts(category_totals, monthly_totals, budgets):
     ax3.legend()
 
     plt.tight_layout()
-    plt.show()  
+    plt.show()  # one call, so all three appear together
